@@ -1,0 +1,4 @@
+POST https://humble-tribble-wvgx7gvvjjjfg5xw-80.app.github.dev/realms/test/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=beohoang98&password=test123&client_id=test&client_secret=m6r4VW5Ujqm1SIuRWYfZenE7F28nIQk6

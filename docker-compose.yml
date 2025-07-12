@@ -1,0 +1,26 @@
+services:
+  sso:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+      - KC_HOSTNAME_STRICT=false
+      - KC_HTTP_ENABLED=true
+      - KC_PROXY_HEADERS=xforwarded
+    command: start
+    ports:
+      - "80:8080"
+      - "819:8080"
+      - "829:8080"
+    volumes:
+      - data:/opt/keycloak/data
+      - ./providers/:/opt/keycloak/providers
+
+volumes:
+  data:
+    name: keycloak_data
+    driver: local
+
+networks:
+  default:
+    name: keycloak_network
