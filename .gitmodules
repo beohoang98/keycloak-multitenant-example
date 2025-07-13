@@ -1,3 +1,6 @@
 [submodule "submodules/keycloak-multi-tenancy"]
 	path = submodules/keycloak-multi-tenancy
 	url = https://github.com/anarsultanov/keycloak-multi-tenancy.git
+[submodule "submodules/keycloak-orgs"]
+	path = submodules/keycloak-orgs
+	url = https://github.com/p2-inc/keycloak-orgs.git
